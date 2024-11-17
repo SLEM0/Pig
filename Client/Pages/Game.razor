@@ -1,0 +1,156 @@
+﻿@page "/game"
+@using Client.Services
+@using Client.Components
+@inject GameService GameService
+
+<h1>Dice Game</h1>
+
+@if (!gameInitialized)
+{
+    <input @bind="userName" placeholder="Enter your name" /><br />
+    <button @onclick="CreateGame">Create Game</button><br />
+    <input @bind="gameId" placeholder="Enter game code" />
+    <button @onclick="JoinGame">Join Game</button>
+}
+
+@if (gameInitialized)
+{
+    <p>gameId @gameId</p>
+}
+
+@if (canRollForTurn)
+{
+    <p>Ожидание определения хода...</p>
+
+    <button @onclick="RollForTurn">Roll for Turn</button>
+}
+
+@if (gameStarted)
+{
+    <p>Игроки:</p>
+    <ul>
+        @foreach (var player in players)
+        {
+            <li>
+                @player: @(PlayersScores.ContainsKey(player) ? PlayersScores[player].ToString() : "0") (Общий счет)
+            </li>
+        }
+    </ul>
+
+    <p>Current Player: @currentPlayer</p>
+    <p>Current Score: @currentScore</p>
+
+    <button @onclick="RollDice" disabled="@(currentPlayer != userName)">Roll Dice</button>
+    <button @onclick="EndTurn" disabled="@(currentPlayer != userName)">End Turn</button>
+}
+@if (gameOver)
+{
+    <p>Winner @GameWinner</p>
+}
+
+@code {
+    private bool gameInitialized = false;
+    private string gameId = "";
+    private List<string> players = new();
+    private string currentPlayer = "";
+    private bool gameStarted = false;
+    private bool canRollForTurn = false;
+    private bool gameOver = false;
+    private string userName = "";
+    private Dictionary<string, int> PlayersScores = new();
+    private int currentScore = 0;
+    private string GameWinner = "";
+
+    private async Task JoinGame()
+    {
+        if (!string.IsNullOrWhiteSpace(userName))
+        {
+            gameInitialized = true;
+            await GameService.JoinGameAsync(gameId, userName);
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        GameService.OnPlayerListUpdated += (updatedPlayers) =>
+        {
+            players = updatedPlayers;
+            StateHasChanged();
+        };
+
+        GameService.OnGameStarted += (startingPlayer) =>
+        {
+            gameStarted = true;
+            canRollForTurn = false;
+            currentPlayer = startingPlayer;
+            StateHasChanged();
+        };
+
+        GameService.OnRollForTurn += () =>
+        {
+            canRollForTurn = true;
+            StateHasChanged();
+        };
+
+        GameService.OnDiceRolled += (player, roll, currentTurnScore, totalScores) =>
+        {
+            currentScore = currentTurnScore; 
+            PlayersScores = totalScores;
+            StateHasChanged();
+        };
+
+        GameService.OnRolledOne += (nextPlayer, totalScores) =>
+        {
+            currentPlayer = nextPlayer;
+            currentScore = 0;
+            PlayersScores = totalScores;
+            StateHasChanged();
+        };
+
+        GameService.OnNextTurn += (nextPlayer, totalScores) =>
+        {
+            currentPlayer = nextPlayer;
+            PlayersScores = totalScores;
+            StateHasChanged();
+        };
+
+        GameService.OnGameOver += (winner) =>
+        {
+            gameStarted = false;
+            gameOver = true;
+            GameWinner = winner;
+            StateHasChanged();
+        };
+
+        await GameService.ConnectAsync();
+    }
+
+    private async Task RollForTurn()
+    {
+        canRollForTurn = false;
+        await GameService.RollForTurnAsync(gameId);
+    }
+
+    private async Task RollDice()
+    {
+        await GameService.RollDiceAsync(gameId);
+    }
+
+    private async Task EndTurn()
+    {
+        await GameService.EndTurnAsync(gameId);
+    }
+
+    private async Task CreateGame()
+    {
+        // Генерация случайного 5-значного кода
+        var random = new Random();
+        gameId = random.Next(1000, 9999).ToString();
+        gameInitialized = true;
+        if (!string.IsNullOrWhiteSpace(userName))
+        {
+            await GameService.JoinGameAsync(gameId, userName);
+        }
+        StateHasChanged();
+    }
+}
