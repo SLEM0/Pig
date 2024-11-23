@@ -28,5 +28,9 @@ namespace Server.Models
         {
             games.TryRemove(gameId, out _);
         }
+        public IEnumerable<string> GetActiveGameIds()
+        {
+            return games.Keys;
+        }
     }
 }

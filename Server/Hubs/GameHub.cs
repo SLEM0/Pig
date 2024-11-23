@@ -20,56 +20,18 @@ namespace Server.Hubs
 
             await Groups.AddToGroupAsync(Context.ConnectionId, gameId);
 
-            // Отправка уведомления о подключении нового игрока
-            //await Clients.Group(gameId).SendAsync("PlayerJoined", userName);
-
             // Отправка обновленного списка игроков всем в группе
             await Clients.Group(gameId).SendAsync("UpdatePlayerList", game.Players);
 
-            Console.WriteLine($"Player {userName} joined game {gameId}. Total players: {game.Players.Count}");
-
             if (game.Players.Count == 2)
             {
-                await Clients.Group(gameId).SendAsync("RollForTurn");
-            }
-        }
+                // Случайный выбор первого игрока
+                var random = new Random();
+                var startingPlayer = game.Players[random.Next(game.Players.Count)];
 
-        public async Task RollForTurn(string gameId)
-        {
-            var game = gameManager.GetGame(gameId);
-            if (game == null || game.Players.Count < 2) return;
-
-            var currentUserName = Context.Items["UserName"] as string;
-
-            // Каждый игрок бросает кость
-            int roll = game.RollDice();
-            game.PlayerRolls[currentUserName] = roll;
-
-            // Если оба игрока бросили кости, определяем первого игрока
-            if (game.PlayerRolls.Count == 2)
-            {
-                var player1 = game.Players[0];
-                var player2 = game.Players[1];
-                int roll1 = game.PlayerRolls[player1];
-                int roll2 = game.PlayerRolls[player2];
-
-                if (roll1 > roll2)
-                {
-                    game.StartGame(player1);
-                }
-                else if (roll2 > roll1)
-                {
-                    game.StartGame(player2);
-                }
-                else
-                {
-                    // Повторить бросок в случае ничьей
-                    game.PlayerRolls.Clear();
-                    Console.WriteLine("ничья");
-                    await Clients.Group(gameId).SendAsync("RollForTurn");
-                    return;
-                }
-                Console.WriteLine("hub");
+                // Установка первого игрока и начало игры
+                game.StartGame(startingPlayer);
+                // Уведомление о начале игры
                 await Clients.Group(gameId).SendAsync("GameStarted", game.CurrentPlayer);
             }
         }
@@ -96,6 +58,7 @@ namespace Server.Hubs
             else
             {
                 game.CurrentTurnScores[game.CurrentPlayer] += diceRoll;
+                Console.WriteLine(diceRoll);
                 await Clients.Group(gameId).SendAsync("DiceRolled", game.CurrentPlayer, diceRoll, game.CurrentTurnScores[game.CurrentPlayer], game.Scores);
             }
         }
@@ -128,5 +91,25 @@ namespace Server.Hubs
             game.NextTurn();
             await Clients.Group(gameId).SendAsync("NextTurn", game.CurrentPlayer, game.Scores);
         }
+        public override async Task OnDisconnectedAsync(Exception? exception)
+        {
+            if (Context.Items["UserName"] is not string userName) return;
+
+            foreach (var gameId in gameManager.GetActiveGameIds())
+            {
+                var game = gameManager.GetGame(gameId);
+                if (game != null && game.RemovePlayer(userName))
+                {
+                    // Уведомить всех игроков о завершении игры
+                    await Clients.Group(gameId).SendAsync("GameAborted");
+                    // Удалить игру
+                    gameManager.RemoveGame(gameId);
+                    break;
+                }
+            }
+
+            await base.OnDisconnectedAsync(exception);
+        }
+
     }
 }

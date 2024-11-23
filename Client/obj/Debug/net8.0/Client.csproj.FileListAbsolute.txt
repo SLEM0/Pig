@@ -1089,6 +1089,7 @@ C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\Client.dll
 C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\refint\Client.dll
 C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\Client.pdb
 C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\ref\Client.dll
-C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\compressed\kb90l4x90i-1lxq2bhj7b.gz
-C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\compressed\nrce2f7bjz-blnbztwq0y.gz
-C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\compressed\0kih5qk3hm-tpopwguz4l.gz
+C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\Client.sourcelink.json
+C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\compressed\kb90l4x90i-k1zxcpypd4.gz
+C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\compressed\nrce2f7bjz-f01qpalztt.gz
+C:\Users\User\source\repos\Pig\Client\obj\Debug\net8.0\compressed\0kih5qk3hm-4qn6p2psz8.gz

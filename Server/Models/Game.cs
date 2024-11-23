@@ -65,5 +65,16 @@
             GameStarted = true;
             CurrentPlayer = startingPlayer;
         }
+        public bool RemovePlayer(string player)
+        {
+            if (Players.Remove(player))
+            {
+                Scores.Remove(player);
+                CurrentTurnScores.Remove(player);
+                PlayerRolls.Remove(player);
+                return true;
+            }
+            return false;
+        }
     }
 }

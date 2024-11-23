@@ -29,6 +29,18 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\images\\happy.png",
+      "PackagePath": "staticwebassets\\images\\happy.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\images\\happy2.png",
+      "PackagePath": "staticwebassets\\images\\happy2.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\images\\sad.png",
+      "PackagePath": "staticwebassets\\images\\sad.png"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

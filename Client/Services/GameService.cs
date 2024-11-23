@@ -9,17 +9,15 @@ namespace Client.Services
         public event Action<string, Dictionary<string, int>>? OnRolledOne;
         public event Action<string, Dictionary<string, int>>? OnNextTurn;
         public event Action<string>? OnGameOver;
-        public event Action? OnRollForTurn;
         public event Action<List<string>>? OnPlayerListUpdated;
+        public event Action? OnGameAborted;
 
         private HubConnection? _hubConnection;
         public string? CurrentPlayer { get; private set; }
 
         public async Task ConnectAsync()
         {
-            _hubConnection = new HubConnectionBuilder()
-                .WithUrl("http://localhost:5162/gamehub")
-                .Build();
+            _hubConnection = new HubConnectionBuilder().WithUrl("http://localhost:5162/gamehub").Build();
 
             _hubConnection.On<string>("GameStarted", (startingPlayer) =>
             {
@@ -46,14 +44,14 @@ namespace Client.Services
                 OnGameOver?.Invoke(winner);
             });
 
-            _hubConnection.On("RollForTurn", () =>
-            {
-                OnRollForTurn?.Invoke();
-            });
-
             _hubConnection.On<List<string>>("UpdatePlayerList", (updatedPlayers) =>
             {
                 OnPlayerListUpdated?.Invoke(updatedPlayers);
+            });
+
+            _hubConnection.On("GameAborted", () =>
+            {
+                OnGameAborted?.Invoke();
             });
 
             await _hubConnection.StartAsync();

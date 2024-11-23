@@ -1,0 +1,44 @@
+﻿<div class="cube-container">
+    <div class="cube" style="@GetRollingAnimation()">
+        <div class="face front">1</div>
+        <div class="face back">2</div>
+        <div class="face left">3</div>
+        <div class="face right">4</div>
+        <div class="face top">5</div>
+        <div class="face bottom">6</div>
+    </div>
+</div>
+
+@code {
+    private int rotationX = 0;
+    private int rotationY = 0;
+
+    [Parameter] public int CurrentValue { get; set; }
+    [Parameter] public bool IsRolling { get; set; }
+
+    private string GetRollingAnimation()
+    {
+        if (IsRolling)
+        {
+            // Добавляем случайное вращение
+            rotationX += 720; // Два полных оборота по X
+            rotationY += 720; // Два полных оборота по Y
+        }
+        else
+        {
+            // Устанавливаем положение в зависимости от результата
+            (rotationX, rotationY) = CurrentValue switch
+            {
+                1 => (0, 0),
+                2 => (0, 180),
+                4 => (0, -90),
+                3 => (0, 90),
+                6 => (-90, 0),
+                5 => (90, 0),
+                _ => (0, 0)
+            };
+        }
+
+        return $"transform: rotateX({rotationX}deg) rotateY({rotationY}deg); transition: transform 1s;";
+    }
+}

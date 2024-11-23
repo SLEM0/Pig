@@ -70,3 +70,4 @@ C:\Users\User\source\repos\Pig\Server\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\User\source\repos\Pig\Server\bin\Debug\net8.0\System.Threading.Channels.dll
 C:\Users\User\source\repos\Pig\Server\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\User\source\repos\Pig\Server\obj\Debug\net8.0\Server.csproj.Up2Date
+C:\Users\User\source\repos\Pig\Server\obj\Debug\net8.0\Server.sourcelink.json

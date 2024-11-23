@@ -2,76 +2,108 @@
 @using Client.Services
 @using Client.Components
 @inject GameService GameService
-
-<h1>Dice Game</h1>
-
-@if (!gameInitialized)
-{
-    <input @bind="userName" placeholder="Enter your name" /><br />
-    <button @onclick="CreateGame">Create Game</button><br />
-    <input @bind="gameId" placeholder="Enter game code" />
-    <button @onclick="JoinGame">Join Game</button>
-}
-
-@if (gameInitialized)
-{
-    <p>gameId @gameId</p>
-}
-
-@if (canRollForTurn)
-{
-    <p>Ожидание определения хода...</p>
-
-    <button @onclick="RollForTurn">Roll for Turn</button>
-}
+@inject NavigationManager NavigationManager
 
 @if (gameStarted)
 {
-    <p>Игроки:</p>
-    <ul>
-        @foreach (var player in players)
-        {
-            <li>
-                @player: @(PlayersScores.ContainsKey(player) ? PlayersScores[player].ToString() : "0") (Общий счет)
-            </li>
-        }
-    </ul>
+    <div class="position-relative text-white mb-3">
+        <!-- Центр -->
+        <p class="mb-0 display-5 score-box text-center position-absolute start-50 translate-middle-x">Текущий счет: @currentScore</p>
+        <!-- Справа -->
+        <p class="mb-0 position-absolute end-0">Id игры: <strong>@gameId</strong></p>
+    </div>
 
-    <p>Current Player: @currentPlayer</p>
-    <p>Current Score: @currentScore</p>
+    <!-- Общий счет -->
+    <div class="col-3">
+        <p class="text-white fw-bold">Общий счет:</p>
+        <ul class="list-unstyled text-white">
+            @foreach (var player in players)
+            {
+                <li class="mb-2">@player: @(PlayersScores.ContainsKey(player) ? PlayersScores[player].ToString() : "0")</li>
+            }
+        </ul>
+    </div>
 
-    <button @onclick="RollDice" disabled="@(currentPlayer != userName)">Roll Dice</button>
-    <button @onclick="EndTurn" disabled="@(currentPlayer != userName)">End Turn</button>
+    <!-- Кубик -->
+    <div class="text-center my-3">
+        <Dice CurrentValue="diceValue" IsRolling="isRollingDice" />
+    </div>
+
+    <!-- Кнопки управления -->
+    <div class="d-flex justify-content-center fixed-bottom mb-4">
+        <button @onclick="RollDice"
+        class="@($"btn btn-lg me-2 {(currentPlayer != userName ? "btn-secondary" : "btn-warning")}")"
+        style="background-color: yellow; color: black;"
+        disabled="@(currentPlayer != userName)">
+            Бросить кубик
+        </button>
+        <button @onclick="EndTurn"
+        class="@($"btn btn-lg ms-2 {(currentPlayer != userName ? "btn-secondary" : "btn-warning")}")"
+        style="background-color: yellow; color: black;"
+        disabled="@(currentPlayer != userName)">
+            Завершить ход
+        </button>
+    </div>
 }
+else
+{
+    <h1 class="text-white text-center">Id игры: <strong>@gameId</strong></h1>
+}
+
 @if (gameOver)
 {
-    <p>Winner @GameWinner</p>
+    <div class="text-center text-white">
+        @if (userName == GameWinner)
+        {
+            <p class="display-4">Победа!</p>
+            <img src="images/happy.png" alt="Победа" height="500"/><br />
+        }
+        else
+        {
+            <p class="display-4">Поражение</p>
+            <img src="images/sad.png" alt="Поражение" height="500"/><br />
+        }
+        <button @onclick="PlayAgain" class="btn btn-lg btn-warning mt-3">Играть еще раз</button>
+    </div>
 }
 
+<style>
+    body {
+    background-color: #0bda51;
+    }
+
+    .btn-warning:disabled {
+    background-color: grey !important;
+    color: white !important;
+    }
+</style>
+
 @code {
-    private bool gameInitialized = false;
     private string gameId = "";
     private List<string> players = new();
     private string currentPlayer = "";
     private bool gameStarted = false;
-    private bool canRollForTurn = false;
     private bool gameOver = false;
     private string userName = "";
     private Dictionary<string, int> PlayersScores = new();
     private int currentScore = 0;
     private string GameWinner = "";
-
-    private async Task JoinGame()
-    {
-        if (!string.IsNullOrWhiteSpace(userName))
-        {
-            gameInitialized = true;
-            await GameService.JoinGameAsync(gameId, userName);
-        }
-    }
+    private int diceValue = 1; // Текущее значение на кубике
+    private bool isRollingDice = false;
 
     protected override async Task OnInitializedAsync()
     {
+        var query = new Uri(NavigationManager.Uri).Query;
+        var parameters = System.Web.HttpUtility.ParseQueryString(query);
+        userName = parameters["userName"];
+        gameId = parameters["gameId"];
+
+        if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(gameId))
+        {
+            NavigationManager.NavigateTo("/");
+            return;
+        }
+
         GameService.OnPlayerListUpdated += (updatedPlayers) =>
         {
             players = updatedPlayers;
@@ -80,21 +112,17 @@
 
         GameService.OnGameStarted += (startingPlayer) =>
         {
+            isRollingDice = false;
             gameStarted = true;
-            canRollForTurn = false;
             currentPlayer = startingPlayer;
-            StateHasChanged();
-        };
-
-        GameService.OnRollForTurn += () =>
-        {
-            canRollForTurn = true;
             StateHasChanged();
         };
 
         GameService.OnDiceRolled += (player, roll, currentTurnScore, totalScores) =>
         {
-            currentScore = currentTurnScore; 
+            diceValue = roll;
+            isRollingDice = false;
+            currentScore = currentTurnScore;
             PlayersScores = totalScores;
             StateHasChanged();
         };
@@ -103,12 +131,15 @@
         {
             currentPlayer = nextPlayer;
             currentScore = 0;
+            diceValue = 1; // Сброс кубика
+            isRollingDice = false;
             PlayersScores = totalScores;
             StateHasChanged();
         };
 
         GameService.OnNextTurn += (nextPlayer, totalScores) =>
         {
+            isRollingDice = false;
             currentPlayer = nextPlayer;
             PlayersScores = totalScores;
             StateHasChanged();
@@ -116,23 +147,25 @@
 
         GameService.OnGameOver += (winner) =>
         {
+            isRollingDice = false;
             gameStarted = false;
             gameOver = true;
             GameWinner = winner;
             StateHasChanged();
         };
 
-        await GameService.ConnectAsync();
-    }
+        GameService.OnGameAborted += () =>
+        {
+            NavigationManager.NavigateTo("/");
+        };
 
-    private async Task RollForTurn()
-    {
-        canRollForTurn = false;
-        await GameService.RollForTurnAsync(gameId);
+        await GameService.ConnectAsync();
+        await GameService.JoinGameAsync(gameId, userName);
     }
 
     private async Task RollDice()
     {
+        isRollingDice = true;
         await GameService.RollDiceAsync(gameId);
     }
 
@@ -141,16 +174,9 @@
         await GameService.EndTurnAsync(gameId);
     }
 
-    private async Task CreateGame()
+    private async void PlayAgain()
     {
-        // Генерация случайного 5-значного кода
-        var random = new Random();
-        gameId = random.Next(1000, 9999).ToString();
-        gameInitialized = true;
-        if (!string.IsNullOrWhiteSpace(userName))
-        {
-            await GameService.JoinGameAsync(gameId, userName);
-        }
-        StateHasChanged();
+        gameOver = false;
+        await GameService.JoinGameAsync(gameId, userName);
     }
 }

@@ -1,4 +1,63 @@
 ﻿@page "/"
 
-<h3>Welcome to Dice Game!</h3>
-<p><a href="/game">Start Game</a></p>
+<h1 class="text-center text-white">Свинья</h1>
+
+<div class="container text-center">
+    <div class="mb-3">
+        <input @bind="userName" placeholder="Введите имя" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <button @onclick="CreateGame" class="btn btn-success">Создать игру</button>
+    </div>
+    <div class="mb-3">
+        <input @bind="gameId" placeholder="Введите код" class="form-control" />
+    </div>
+    <button @onclick="JoinGame" class="btn btn-primary">Присоединиться</button>
+</div>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p class="text-danger text-center">@errorMessage</p>
+}
+
+@code {
+    private string userName = "";
+    private string gameId = "";
+    private string errorMessage = "";
+
+    private async Task CreateGame()
+    {
+        if (string.IsNullOrWhiteSpace(userName))
+        {
+            errorMessage = "Введите имя!";
+            return;
+        }
+
+        // Генерация случайного кода игры
+        var random = new Random();
+        gameId = random.Next(1000, 9999).ToString();
+
+        // Переход на страницу игры
+        NavigateToGame();
+    }
+
+    private async Task JoinGame()
+    {
+        if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(gameId))
+        {
+            errorMessage = "Введите имя и код игры!";
+            return;
+        }
+
+
+        // Переход на страницу игры
+        NavigateToGame();
+    }
+
+    private void NavigateToGame()
+    {
+        NavigationManager.NavigateTo($"/game?userName={userName}&gameId={gameId}");
+    }
+
+    [Inject] private NavigationManager NavigationManager { get; set; }
+}

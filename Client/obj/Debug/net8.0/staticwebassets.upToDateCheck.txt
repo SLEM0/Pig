@@ -3,5 +3,8 @@ wwwroot\css\bootstrap\bootstrap.min.css
 wwwroot\css\bootstrap\bootstrap.min.css.map
 wwwroot\favicon.png
 wwwroot\icon-192.png
+wwwroot\images\happy.png
+wwwroot\images\happy2.png
+wwwroot\images\sad.png
 wwwroot\index.html
 wwwroot\sample-data\weather.json
