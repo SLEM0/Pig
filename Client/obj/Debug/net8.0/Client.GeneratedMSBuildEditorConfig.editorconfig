@@ -32,10 +32,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/source/repos/Pig/Client/Components/GameBoard.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHYW1lQm9hcmQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/User/source/repos/Pig/Client/Pages/Game.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FtZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

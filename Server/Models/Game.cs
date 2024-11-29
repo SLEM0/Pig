@@ -16,10 +16,10 @@
         public Game(string gameId)
         {
             GameId = gameId;
-            Players = new List<string>();
-            Scores = new Dictionary<string, int>();
-            CurrentTurnScores = new Dictionary<string, int>();
-            PlayerRolls = new Dictionary<string, int>();
+            Players = [];
+            Scores = [];
+            CurrentTurnScores = [];
+            PlayerRolls = [];
             random = new Random();
         }
 

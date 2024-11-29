@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7bKemkzk9H+1qhjy8ltMEZqUPmUdMkOy5lHbaTMcBfc=",
+  "Hash": "PK0wkLyWqUh5DLSck5xQSb3uOBmVYaiLemGUdS4EVow=",
   "Source": "Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "4qn6p2psz8",
-      "Integrity": "ZLHqsZdJKu3JAIjJjIFKb3j3G/Ap6dqzIm1YcZiPC8I=",
+      "Fingerprint": "iri4ttg35z",
+      "Integrity": "/sj7rMIaPkp4K5ApPY7RXZbtS29OJyq/kn0anbiMilU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\blazor.boot.json"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "f01qpalztt",
-      "Integrity": "YUcyM1DLt13NVJn6uEcnBLtOhaZck7roPCRL1NepImk=",
+      "Fingerprint": "54yvy5k2co",
+      "Integrity": "dRSJp2EZnFcSTPgwEDDnxUJF1bU5tbRRTkRKwtjatdM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\Client.pdb"
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "k1zxcpypd4",
-      "Integrity": "qB+X79FGc1VfNqH35M/sN3GEWeaDe0Wzv5/aH+HFgPw=",
+      "Fingerprint": "z1rhqpozda",
+      "Integrity": "N0Hyk9GMWmwUOzd3D8VnZ4bptETuY5qaTJS9lIyqvnU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\webcil\\Client.wasm"
@@ -4553,7 +4553,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\webcil\\WindowsBase.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\0kih5qk3hm-4qn6p2psz8.gz",
+      "Identity": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\0kih5qk3hm-iri4ttg35z.gz",
       "SourceId": "Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -4567,8 +4567,8 @@
       "RelatedAsset": "C:\\Users\\User\\source\\repos\\Pig\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "3ahguuwf72",
-      "Integrity": "e5HyyipeM2oAzaAuFljmM4igMb7+aLgTkIghhXckfs8=",
+      "Fingerprint": "y8yoxd2xb7",
+      "Integrity": "Yjgl3ZlmdgMXa77xAsBqH5qfQWnjs3uOFWtQucIo0Eo=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\Pig\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -7115,7 +7115,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\Pig\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Linq.Expressions.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\kb90l4x90i-k1zxcpypd4.gz",
+      "Identity": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\kb90l4x90i-z1rhqpozda.gz",
       "SourceId": "Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -7129,8 +7129,8 @@
       "RelatedAsset": "C:\\Users\\User\\source\\repos\\Pig\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "intabkhxkt",
-      "Integrity": "nr/k9r+7Qmw+kwMeKH7wCI2Ot6wkm0YUUBGEWBaUNbM=",
+      "Fingerprint": "ezp3jbggip",
+      "Integrity": "SqW5oeZOdXJXIZPEqZWteqxqYnTetZBnyAISg6ln91Q=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\Pig\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Client.wasm"
@@ -7430,7 +7430,7 @@
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\Pig\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Private.CoreLib.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\nrce2f7bjz-f01qpalztt.gz",
+      "Identity": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\nrce2f7bjz-54yvy5k2co.gz",
       "SourceId": "Client",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -7444,8 +7444,8 @@
       "RelatedAsset": "C:\\Users\\User\\source\\repos\\Pig\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "00y4n3cguo",
-      "Integrity": "IKgHhdzuU7ksT1+pUOIFjmvlxbiB3Md1QloK9zK8FEs=",
+      "Fingerprint": "mp6du0g2ew",
+      "Integrity": "OsHFvpmj2fca/FAd4YCQeEradj8ks9KqUxM6kOblr0k=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\Pig\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Client.pdb"
@@ -9145,8 +9145,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xeaylwwpwx",
-      "Integrity": "OV5B7y2Pzw42NCDARdiSE9Zy7U8OwWlrpF2uNyBqmQo=",
+      "Fingerprint": "1dh0neotn0",
+      "Integrity": "G3kvlYLMzZ6NpzmrfSwNlxfHhhDyyLXNVM0fqMXMQms=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\app.css"
@@ -9250,8 +9250,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "gxse0s531x",
-      "Integrity": "DHbgpS4piHXjZDNsJj8zrp6O9c+X6CH0LQbPq12mGak=",
+      "Fingerprint": "xrzsga8423",
+      "Integrity": "HZxodfFh9zF8m3pGweLtqwUsK3cjqWyWTqYb61N7pd0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\happy.png"
@@ -9361,11 +9361,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZLHqsZdJKu3JAIjJjIFKb3j3G/Ap6dqzIm1YcZiPC8I=\""
+          "Value": "\"/sj7rMIaPkp4K5ApPY7RXZbtS29OJyq/kn0anbiMilU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 20:05:00 GMT"
+          "Value": "Fri, 29 Nov 2024 12:38:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9375,18 +9375,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZLHqsZdJKu3JAIjJjIFKb3j3G/Ap6dqzIm1YcZiPC8I="
+          "Value": "sha256-/sj7rMIaPkp4K5ApPY7RXZbtS29OJyq/kn0anbiMilU="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\0kih5qk3hm-4qn6p2psz8.gz",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\0kih5qk3hm-iri4ttg35z.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000107089312"
+          "Quality": "0.000107100782"
         }
       ],
       "ResponseHeaders": [
@@ -9396,15 +9396,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9337"
+          "Value": "9336"
         },
         {
           "Name": "ETag",
-          "Value": "\"e5HyyipeM2oAzaAuFljmM4igMb7+aLgTkIghhXckfs8=\""
+          "Value": "\"Yjgl3ZlmdgMXa77xAsBqH5qfQWnjs3uOFWtQucIo0Eo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 19:43:54 GMT"
+          "Value": "Fri, 29 Nov 2024 12:16:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9424,19 +9424,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ZLHqsZdJKu3JAIjJjIFKb3j3G/Ap6dqzIm1YcZiPC8I=\""
+          "Value": "W/\"/sj7rMIaPkp4K5ApPY7RXZbtS29OJyq/kn0anbiMilU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZLHqsZdJKu3JAIjJjIFKb3j3G/Ap6dqzIm1YcZiPC8I="
+          "Value": "sha256-/sj7rMIaPkp4K5ApPY7RXZbtS29OJyq/kn0anbiMilU="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\0kih5qk3hm-4qn6p2psz8.gz",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\0kih5qk3hm-iri4ttg35z.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9445,7 +9445,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9337"
+          "Value": "9336"
         },
         {
           "Name": "Content-Type",
@@ -9453,11 +9453,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"e5HyyipeM2oAzaAuFljmM4igMb7+aLgTkIghhXckfs8=\""
+          "Value": "\"Yjgl3ZlmdgMXa77xAsBqH5qfQWnjs3uOFWtQucIo0Eo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 19:43:54 GMT"
+          "Value": "Fri, 29 Nov 2024 12:16:45 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9475,7 +9475,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-e5HyyipeM2oAzaAuFljmM4igMb7+aLgTkIghhXckfs8="
+          "Value": "sha256-Yjgl3ZlmdgMXa77xAsBqH5qfQWnjs3uOFWtQucIo0Eo="
         }
       ]
     },
@@ -9627,7 +9627,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30596"
+          "Value": "30512"
         },
         {
           "Name": "Content-Type",
@@ -9635,11 +9635,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YUcyM1DLt13NVJn6uEcnBLtOhaZck7roPCRL1NepImk=\""
+          "Value": "\"dRSJp2EZnFcSTPgwEDDnxUJF1bU5tbRRTkRKwtjatdM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 20:04:59 GMT"
+          "Value": "Fri, 29 Nov 2024 12:38:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9649,18 +9649,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YUcyM1DLt13NVJn6uEcnBLtOhaZck7roPCRL1NepImk="
+          "Value": "sha256-dRSJp2EZnFcSTPgwEDDnxUJF1bU5tbRRTkRKwtjatdM="
         }
       ]
     },
     {
       "Route": "_framework/Client.pdb",
-      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\nrce2f7bjz-f01qpalztt.gz",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\nrce2f7bjz-54yvy5k2co.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000045328861"
+          "Quality": "0.000045330916"
         }
       ],
       "ResponseHeaders": [
@@ -9670,15 +9670,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22060"
+          "Value": "22059"
         },
         {
           "Name": "ETag",
-          "Value": "\"IKgHhdzuU7ksT1+pUOIFjmvlxbiB3Md1QloK9zK8FEs=\""
+          "Value": "\"OsHFvpmj2fca/FAd4YCQeEradj8ks9KqUxM6kOblr0k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 19:43:53 GMT"
+          "Value": "Fri, 29 Nov 2024 12:16:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9698,19 +9698,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"YUcyM1DLt13NVJn6uEcnBLtOhaZck7roPCRL1NepImk=\""
+          "Value": "W/\"dRSJp2EZnFcSTPgwEDDnxUJF1bU5tbRRTkRKwtjatdM=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YUcyM1DLt13NVJn6uEcnBLtOhaZck7roPCRL1NepImk="
+          "Value": "sha256-dRSJp2EZnFcSTPgwEDDnxUJF1bU5tbRRTkRKwtjatdM="
         }
       ]
     },
     {
       "Route": "_framework/Client.pdb.gz",
-      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\nrce2f7bjz-f01qpalztt.gz",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\nrce2f7bjz-54yvy5k2co.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9719,7 +9719,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22060"
+          "Value": "22059"
         },
         {
           "Name": "Content-Type",
@@ -9727,11 +9727,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"IKgHhdzuU7ksT1+pUOIFjmvlxbiB3Md1QloK9zK8FEs=\""
+          "Value": "\"OsHFvpmj2fca/FAd4YCQeEradj8ks9KqUxM6kOblr0k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 19:43:53 GMT"
+          "Value": "Fri, 29 Nov 2024 12:16:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9749,7 +9749,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-IKgHhdzuU7ksT1+pUOIFjmvlxbiB3Md1QloK9zK8FEs="
+          "Value": "sha256-OsHFvpmj2fca/FAd4YCQeEradj8ks9KqUxM6kOblr0k="
         }
       ]
     },
@@ -9764,7 +9764,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "34069"
+          "Value": "36117"
         },
         {
           "Name": "Content-Type",
@@ -9772,11 +9772,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qB+X79FGc1VfNqH35M/sN3GEWeaDe0Wzv5/aH+HFgPw=\""
+          "Value": "\"N0Hyk9GMWmwUOzd3D8VnZ4bptETuY5qaTJS9lIyqvnU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 20:05:00 GMT"
+          "Value": "Fri, 29 Nov 2024 12:38:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9786,18 +9786,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qB+X79FGc1VfNqH35M/sN3GEWeaDe0Wzv5/aH+HFgPw="
+          "Value": "sha256-N0Hyk9GMWmwUOzd3D8VnZ4bptETuY5qaTJS9lIyqvnU="
         }
       ]
     },
     {
       "Route": "_framework/Client.wasm",
-      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\kb90l4x90i-k1zxcpypd4.gz",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\kb90l4x90i-z1rhqpozda.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000072348430"
+          "Quality": "0.000068563593"
         }
       ],
       "ResponseHeaders": [
@@ -9807,15 +9807,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13821"
+          "Value": "14584"
         },
         {
           "Name": "ETag",
-          "Value": "\"nr/k9r+7Qmw+kwMeKH7wCI2Ot6wkm0YUUBGEWBaUNbM=\""
+          "Value": "\"SqW5oeZOdXJXIZPEqZWteqxqYnTetZBnyAISg6ln91Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 19:43:53 GMT"
+          "Value": "Fri, 29 Nov 2024 12:16:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9835,19 +9835,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"qB+X79FGc1VfNqH35M/sN3GEWeaDe0Wzv5/aH+HFgPw=\""
+          "Value": "W/\"N0Hyk9GMWmwUOzd3D8VnZ4bptETuY5qaTJS9lIyqvnU=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qB+X79FGc1VfNqH35M/sN3GEWeaDe0Wzv5/aH+HFgPw="
+          "Value": "sha256-N0Hyk9GMWmwUOzd3D8VnZ4bptETuY5qaTJS9lIyqvnU="
         }
       ]
     },
     {
       "Route": "_framework/Client.wasm.gz",
-      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\kb90l4x90i-k1zxcpypd4.gz",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\obj\\Debug\\net8.0\\compressed\\kb90l4x90i-z1rhqpozda.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9856,7 +9856,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "13821"
+          "Value": "14584"
         },
         {
           "Name": "Content-Type",
@@ -9864,11 +9864,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"nr/k9r+7Qmw+kwMeKH7wCI2Ot6wkm0YUUBGEWBaUNbM=\""
+          "Value": "\"SqW5oeZOdXJXIZPEqZWteqxqYnTetZBnyAISg6ln91Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 19:43:53 GMT"
+          "Value": "Fri, 29 Nov 2024 12:16:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9886,7 +9886,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-nr/k9r+7Qmw+kwMeKH7wCI2Ot6wkm0YUUBGEWBaUNbM="
+          "Value": "sha256-SqW5oeZOdXJXIZPEqZWteqxqYnTetZBnyAISg6ln91Q="
         }
       ]
     },
@@ -39099,6 +39099,51 @@
       ]
     },
     {
+      "Route": "css/app.1dh0neotn0.css",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7125"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"G3kvlYLMzZ6NpzmrfSwNlxfHhhDyyLXNVM0fqMXMQms=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Nov 2024 11:26:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1dh0neotn0"
+        },
+        {
+          "Name": "label",
+          "Value": "css/app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-G3kvlYLMzZ6NpzmrfSwNlxfHhhDyyLXNVM0fqMXMQms="
+        }
+      ]
+    },
+    {
       "Route": "css/app.css",
       "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\css\\app.css",
       "Selectors": [],
@@ -39109,7 +39154,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6121"
+          "Value": "7125"
         },
         {
           "Name": "Content-Type",
@@ -39117,11 +39162,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OV5B7y2Pzw42NCDARdiSE9Zy7U8OwWlrpF2uNyBqmQo=\""
+          "Value": "\"G3kvlYLMzZ6NpzmrfSwNlxfHhhDyyLXNVM0fqMXMQms=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 22 Nov 2024 17:57:19 GMT"
+          "Value": "Fri, 29 Nov 2024 11:26:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -39131,52 +39176,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OV5B7y2Pzw42NCDARdiSE9Zy7U8OwWlrpF2uNyBqmQo="
-        }
-      ]
-    },
-    {
-      "Route": "css/app.xeaylwwpwx.css",
-      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\css\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6121"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OV5B7y2Pzw42NCDARdiSE9Zy7U8OwWlrpF2uNyBqmQo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 22 Nov 2024 17:57:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xeaylwwpwx"
-        },
-        {
-          "Name": "label",
-          "Value": "css/app.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OV5B7y2Pzw42NCDARdiSE9Zy7U8OwWlrpF2uNyBqmQo="
+          "Value": "sha256-G3kvlYLMzZ6NpzmrfSwNlxfHhhDyyLXNVM0fqMXMQms="
         }
       ]
     },
@@ -39509,51 +39509,6 @@
       ]
     },
     {
-      "Route": "images/happy.gxse0s531x.png",
-      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\images\\happy.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1479190"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DHbgpS4piHXjZDNsJj8zrp6O9c+X6CH0LQbPq12mGak=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 19:12:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "gxse0s531x"
-        },
-        {
-          "Name": "label",
-          "Value": "images/happy.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-DHbgpS4piHXjZDNsJj8zrp6O9c+X6CH0LQbPq12mGak="
-        }
-      ]
-    },
-    {
       "Route": "images/happy.png",
       "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\images\\happy.png",
       "Selectors": [],
@@ -39564,7 +39519,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1479190"
+          "Value": "340738"
         },
         {
           "Name": "Content-Type",
@@ -39572,11 +39527,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"DHbgpS4piHXjZDNsJj8zrp6O9c+X6CH0LQbPq12mGak=\""
+          "Value": "\"HZxodfFh9zF8m3pGweLtqwUsK3cjqWyWTqYb61N7pd0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 23 Nov 2024 19:12:55 GMT"
+          "Value": "Fri, 29 Nov 2024 09:09:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -39586,7 +39541,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-DHbgpS4piHXjZDNsJj8zrp6O9c+X6CH0LQbPq12mGak="
+          "Value": "sha256-HZxodfFh9zF8m3pGweLtqwUsK3cjqWyWTqYb61N7pd0="
+        }
+      ]
+    },
+    {
+      "Route": "images/happy.xrzsga8423.png",
+      "AssetFile": "C:\\Users\\User\\source\\repos\\Pig\\Client\\wwwroot\\images\\happy.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "340738"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HZxodfFh9zF8m3pGweLtqwUsK3cjqWyWTqYb61N7pd0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Nov 2024 09:09:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xrzsga8423"
+        },
+        {
+          "Name": "label",
+          "Value": "images/happy.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HZxodfFh9zF8m3pGweLtqwUsK3cjqWyWTqYb61N7pd0="
         }
       ]
     },

@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xeaylwwpwx</Fingerprint>
-      <Integrity>OV5B7y2Pzw42NCDARdiSE9Zy7U8OwWlrpF2uNyBqmQo=</Integrity>
+      <Fingerprint>1dh0neotn0</Fingerprint>
+      <Integrity>G3kvlYLMzZ6NpzmrfSwNlxfHhhDyyLXNVM0fqMXMQms=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\app.css'))</OriginalItemSpec>
@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gxse0s531x</Fingerprint>
-      <Integrity>DHbgpS4piHXjZDNsJj8zrp6O9c+X6CH0LQbPq12mGak=</Integrity>
+      <Fingerprint>xrzsga8423</Fingerprint>
+      <Integrity>HZxodfFh9zF8m3pGweLtqwUsK3cjqWyWTqYb61N7pd0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\happy.png'))</OriginalItemSpec>

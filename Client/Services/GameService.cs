@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Client.Services
 {
@@ -11,6 +12,7 @@ namespace Client.Services
         public event Action<string>? OnGameOver;
         public event Action<List<string>>? OnPlayerListUpdated;
         public event Action? OnGameAborted;
+        public event Action<string>? OnError;
 
         private HubConnection? _hubConnection;
         public string? CurrentPlayer { get; private set; }
@@ -52,6 +54,11 @@ namespace Client.Services
             _hubConnection.On("GameAborted", () =>
             {
                 OnGameAborted?.Invoke();
+            });
+
+            _hubConnection.On<string>("Error", (message) =>
+            {
+                OnError?.Invoke(message);
             });
 
             await _hubConnection.StartAsync();

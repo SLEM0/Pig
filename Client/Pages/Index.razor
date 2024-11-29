@@ -1,13 +1,13 @@
 ﻿@page "/"
 
-<h1 class="text-center text-white">Свинья</h1>
+<h1 class="text-center text-white display-1 name">Свинья</h1>
 
 <div class="container text-center">
     <div class="mb-3">
         <input @bind="userName" placeholder="Введите имя" class="form-control" />
     </div>
     <div class="mb-3">
-        <button @onclick="CreateGame" class="btn btn-success">Создать игру</button>
+        <button @onclick="CreateGame" class="btn btn-primary">Создать игру</button>
     </div>
     <div class="mb-3">
         <input @bind="gameId" placeholder="Введите код" class="form-control" />

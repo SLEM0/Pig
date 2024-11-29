@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\Pig\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F7C06773-5FE7-4EB1-AABB-182986116B6A}|Client\\Client.csproj|c:\\users\\user\\source\\repos\\pig\\client\\pages\\game.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F7C06773-5FE7-4EB1-AABB-182986116B6A}|Client\\Client.csproj|solutionrelative:client\\pages\\game.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7C06773-5FE7-4EB1-AABB-182986116B6A}|Client\\Client.csproj|c:\\users\\user\\source\\repos\\pig\\client\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F7C06773-5FE7-4EB1-AABB-182986116B6A}|Client\\Client.csproj|solutionrelative:client\\pages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7C06773-5FE7-4EB1-AABB-182986116B6A}|Client\\Client.csproj|c:\\users\\user\\source\\repos\\pig\\client\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7C06773-5FE7-4EB1-AABB-182986116B6A}|Client\\Client.csproj|solutionrelative:client\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B819CD9D-772A-4CC5-87FF-B6F90E6ACC3A}|Server\\Server.csproj|c:\\users\\user\\source\\repos\\pig\\server\\hubs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B819CD9D-772A-4CC5-87FF-B6F90E6ACC3A}|Server\\Server.csproj|solutionrelative:server\\hubs\\gamehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7C06773-5FE7-4EB1-AABB-182986116B6A}|Client\\Client.csproj|c:\\users\\user\\source\\repos\\pig\\client\\pages\\game.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7C06773-5FE7-4EB1-AABB-182986116B6A}|Client\\Client.csproj|solutionrelative:client\\pages\\game.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B819CD9D-772A-4CC5-87FF-B6F90E6ACC3A}|Server\\Server.csproj|c:\\users\\user\\source\\repos\\pig\\server\\models\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B819CD9D-772A-4CC5-87FF-B6F90E6ACC3A}|Server\\Server.csproj|solutionrelative:server\\models\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B819CD9D-772A-4CC5-87FF-B6F90E6ACC3A}|Server\\Server.csproj|c:\\users\\user\\source\\repos\\pig\\server\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B819CD9D-772A-4CC5-87FF-B6F90E6ACC3A}|Server\\Server.csproj|solutionrelative:server\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,67 +38,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Pig\\Server\\Models\\GameManager.cs",
-              "RelativeDocumentMoniker": "Server\\Models\\GameManager.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Pig\\Server\\Models\\GameManager.cs",
-              "RelativeToolTip": "Server\\Models\\GameManager.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T19:59:28.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Pig\\Server\\Models\\Game.cs",
-              "RelativeDocumentMoniker": "Server\\Models\\Game.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Pig\\Server\\Models\\Game.cs",
-              "RelativeToolTip": "Server\\Models\\Game.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAkwE0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T19:59:27.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameHub.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Pig\\Server\\Hubs\\GameHub.cs",
-              "RelativeDocumentMoniker": "Server\\Hubs\\GameHub.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Pig\\Server\\Hubs\\GameHub.cs",
-              "RelativeToolTip": "Server\\Hubs\\GameHub.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAgwF0AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T18:54:39.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Game.razor",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Pig\\Client\\Pages\\Game.razor",
               "RelativeDocumentMoniker": "Client\\Pages\\Game.razor",
               "ToolTip": "C:\\Users\\User\\source\\repos\\Pig\\Client\\Pages\\Game.razor",
               "RelativeToolTip": "Client\\Pages\\Game.razor",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAswJsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANIAAAAAAAAAAAAAAMcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-16T19:54:22.901Z",
+              "WhenOpened": "2024-11-29T12:33:28.628Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Pig\\Client\\Pages\\Index.razor",
+              "RelativeDocumentMoniker": "Client\\Pages\\Index.razor",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Pig\\Client\\Pages\\Index.razor",
+              "RelativeToolTip": "Client\\Pages\\Index.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T12:27:41.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GameService.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Pig\\Client\\Services\\GameService.cs",
               "RelativeDocumentMoniker": "Client\\Services\\GameService.cs",
               "ToolTip": "C:\\Users\\User\\source\\repos\\Pig\\Client\\Services\\GameService.cs",
               "RelativeToolTip": "Client\\Services\\GameService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwFsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T19:51:44.957Z",
+              "WhenOpened": "2024-11-29T12:26:32.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameHub.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Pig\\Server\\Hubs\\GameHub.cs",
+              "RelativeDocumentMoniker": "Server\\Hubs\\GameHub.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\Pig\\Server\\Hubs\\GameHub.cs",
+              "RelativeToolTip": "Server\\Hubs\\GameHub.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBAAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T12:25:45.697Z",
               "EditorCaption": ""
             }
           ]

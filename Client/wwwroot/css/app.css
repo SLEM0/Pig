@@ -121,9 +121,9 @@ code {
     transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-    .cube.rolling {
-        animation: roll-animation 3s infinite; /* Анимация длится 3 секунды */
-    }
+.cube.rolling {
+    animation: roll-animation 3s infinite; /* Анимация длится 3 секунды */
+}
 
 .face {
     position: absolute;
@@ -204,3 +204,45 @@ body {
     font-size: 2.5rem; /* Размер текста меньше, чем display-1 */
 }
 
+.name {
+    text-shadow: 1px 1px 0 blue, -1px 1px 0 blue, 1px -1px 0 blue, -1px -1px 0 blue;
+    margin-top: 5rem; /* Увеличенные отступы сверху */
+    margin-bottom: 5rem; /* Увеличенные отступы снизу */
+}
+
+.custom-toast {
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(255,0,0,0.5) 50%, rgba(255,0,0,0) 100%);
+    backdrop-filter: blur(8px);
+    font-size: 1.5rem; /* Увеличение текста */
+    font-weight: bold;
+    color: white;
+    max-width: 80%; /* Ограничение ширины */
+    margin-top: 20px; /* Отступ сверху */
+    animation: fade-in-out 3s ease-in-out; /* Анимация */
+}
+
+.fade-in-out {
+    animation: fade-in-out 3s ease-in-out;
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}

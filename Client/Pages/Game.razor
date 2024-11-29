@@ -19,7 +19,10 @@
         <ul class="list-unstyled text-white">
             @foreach (var player in players)
             {
-                <li class="mb-2">@player: @(PlayersScores.ContainsKey(player) ? PlayersScores[player].ToString() : "0")</li>
+                var isCurrentUser = player == userName;
+                <li class="mb-2 @(isCurrentUser ? "fw-bold text-danger" : "")">
+                    @player: @(PlayersScores.ContainsKey(player) ? PlayersScores[player].ToString() : "0")
+                </li>
             }
         </ul>
     </div>
@@ -28,6 +31,14 @@
     <div class="text-center my-3">
         <Dice CurrentValue="diceValue" IsRolling="isRollingDice" />
     </div>
+
+    <!-- Надпись "Ход завершен" -->
+    @if (showTurnEndedMessage)
+    {
+        <div class="custom-toast text-white text-center mx-auto p-3 rounded fade-in-out" role="alert">
+            @turnEndedMessage
+        </div>
+    }
 
     <!-- Кнопки управления -->
     <div class="d-flex justify-content-center fixed-bottom mb-4">
@@ -49,23 +60,32 @@ else
 {
     <h1 class="text-white text-center">Id игры: <strong>@gameId</strong></h1>
 }
-
+<link rel="preload" href="images/happy.png" as="image">
+<link rel="preload" href="images/sad.png" as="image">
 @if (gameOver)
 {
     <div class="text-center text-white">
         @if (userName == GameWinner)
         {
             <p class="display-4">Победа!</p>
-            <img src="images/happy.png" alt="Победа" height="500"/><br />
+            <img src="images/happy.png" alt="Победа" height="500"><br />
         }
         else
         {
             <p class="display-4">Поражение</p>
-            <img src="images/sad.png" alt="Поражение" height="500"/><br />
+            <img src="images/sad.png" alt="Победа" height="500"><br />
         }
         <button @onclick="PlayAgain" class="btn btn-lg btn-warning mt-3">Играть еще раз</button>
     </div>
 }
+
+@if (errorMessage != null)
+{
+    <div class="alert alert-danger text-center" role="alert">
+        @errorMessage
+    </div>
+}
+
 
 <style>
     body {
@@ -90,6 +110,9 @@ else
     private string GameWinner = "";
     private int diceValue = 1; // Текущее значение на кубике
     private bool isRollingDice = false;
+    private bool showTurnEndedMessage = false;
+    private string turnEndedMessage = "";
+    private string? errorMessage = null;
 
     protected override async Task OnInitializedAsync()
     {
@@ -129,8 +152,13 @@ else
 
         GameService.OnRolledOne += (nextPlayer, totalScores) =>
         {
-            currentPlayer = nextPlayer;
+            turnEndedMessage = $"Ход завершен! Набрано 0 очков";
+            showTurnEndedMessage = true;
             currentScore = 0;
+            StateHasChanged();
+            _ = HideTurnEndedMessageAsync();
+
+            currentPlayer = nextPlayer;
             diceValue = 1; // Сброс кубика
             isRollingDice = false;
             PlayersScores = totalScores;
@@ -139,6 +167,12 @@ else
 
         GameService.OnNextTurn += (nextPlayer, totalScores) =>
         {
+            turnEndedMessage = $"Ход завершен! Набрано {currentScore} очков";
+            showTurnEndedMessage = true;
+            currentScore = 0;
+            StateHasChanged();
+            _ = HideTurnEndedMessageAsync();
+
             isRollingDice = false;
             currentPlayer = nextPlayer;
             PlayersScores = totalScores;
@@ -159,13 +193,17 @@ else
             NavigationManager.NavigateTo("/");
         };
 
+        GameService.OnError += HandleError;
+
         await GameService.ConnectAsync();
         await GameService.JoinGameAsync(gameId, userName);
+        errorMessage = null;
     }
 
     private async Task RollDice()
     {
         isRollingDice = true;
+        await Task.Delay(500);
         await GameService.RollDiceAsync(gameId);
     }
 
@@ -178,5 +216,18 @@ else
     {
         gameOver = false;
         await GameService.JoinGameAsync(gameId, userName);
+    }
+
+    private async Task HideTurnEndedMessageAsync()
+    {
+        await Task.Delay(3000); // Задержка 3 секунды
+        showTurnEndedMessage = false;
+        StateHasChanged();
+    }
+
+    private void HandleError(string message)
+    {
+        errorMessage = message; // Сохраняем сообщение об ошибке
+        StateHasChanged(); // Обновляем интерфейс
     }
 }
